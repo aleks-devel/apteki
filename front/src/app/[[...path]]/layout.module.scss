@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  max-width: 1810px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 26px auto;
+
+  .leftBlock {
+    display: flex;
+    gap: 52px;
+  }
+
+  .rightBlock {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.footer {
+  display: flex;
+  max-width: 1520px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 60px auto;
+
+  .leftSection {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    .logoBlock {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    .socials {
+      display: flex;
+      gap: 12px;
+    }
+  }
+
+  .rightSection p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

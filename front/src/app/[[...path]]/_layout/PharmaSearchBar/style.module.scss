@@ -1,0 +1,112 @@
+.container {
+  position: relative;
+  display: flex;
+  width: 410px;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 100px;
+  background: var(--third-bg);
+  gap: 10px;
+
+  input {
+    width: 100%;
+    height: 48px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: normal;
+    outline: none;
+
+    &::placeholder {
+      font-weight: 300;
+    }
+
+    &:focus ~ .searchResult {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .searchResult {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+    width: 410px;
+    height: 350px;
+    flex-direction: column;
+    padding: 0 10px;
+    border-radius: 4px;
+    background: #F5F4FB;
+    box-shadow: 1px 4px 10px 4px rgba(166, 166, 166, 0.25);
+    gap: 10px;
+    opacity: 0;
+    overflow-y: auto;
+    transition: opacity .3s ease;
+    visibility: hidden;
+
+    li {
+      list-style-type: none;
+
+      a {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 10px;
+        border-bottom: 1px solid #6E6D7A;
+        cursor: pointer;
+        gap: 10px;
+        transition: transform .3s ease;
+
+        .firstRow {
+          display: flex;
+          justify-content: space-between;
+
+          & > p {
+            color: var(--secondary-color);
+            font-size: 14px;
+          }
+
+          .time {
+            display: flex;
+            gap: 8px;
+
+            * {
+              font-size: 14px;
+            }
+
+            &.open * {
+              color: #52AE4F;
+            }
+
+            &.close * {
+              color: #E33E22;
+            }
+          }
+        }
+
+        .secondRow {
+          display: flex;
+          align-items: center;
+          gap: 11px;
+        }
+
+        &:hover {
+          transform: translateX(-10px);
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: #6E6D7A;
+    }
+  }
+}

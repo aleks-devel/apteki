@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+
+  .options {
+    position: absolute;
+    top: 140%;
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 10px;
+    background: var(--third-bg);
+    box-shadow: 0 4px 9px 0 #bbbbbb61;
+    gap: 5px;
+    z-index: 20;
+
+    .option {
+      padding: 12px 25px;
+      transition: background-color .3s ease;
+
+      &:hover, &.selected {
+        background: var(--main-bg);
+      }
+    }
+  }
+
+  &:focus {
+    .options {
+      display: flex;
+    }
+  }
+}

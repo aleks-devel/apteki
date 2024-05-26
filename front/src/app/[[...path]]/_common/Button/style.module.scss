@@ -1,0 +1,39 @@
+.button {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 100px;
+  font-size: 14px;
+  outline: none;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &.main {
+    background: var(--secondary-bg);
+    color: #FFFFFF;
+
+    &:hover {
+      background: #585265;
+    }
+
+    &:disabled {
+      background: #585265;
+    }
+  }
+
+  &.second {
+    background: #FFFFFF;
+    color: var(--secondary-color);
+
+    &:hover {
+      background: #F5F4FB;
+    }
+
+    &:disabled {
+      background: #F5F4FB;
+    }
+  }
+
+  &:disabled {
+    cursor: progress;
+  }
+}
