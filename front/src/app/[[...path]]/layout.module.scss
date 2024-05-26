@@ -1,18 +1,9 @@
-.header {
-  display: flex;
-  max-width: 1810px;
-  align-items: center;
-  justify-content: space-between;
-  margin: 26px auto;
+.body {
+  overflow: auto;
+  height: 100vh;
 
-  .leftBlock {
-    display: flex;
-    gap: 52px;
-  }
-
-  .rightBlock {
-    display: flex;
-    gap: 24px;
+  &.noScroll {
+    overflow: hidden;
   }
 }
 

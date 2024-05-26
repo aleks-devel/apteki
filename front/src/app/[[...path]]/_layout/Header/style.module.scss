@@ -1,0 +1,28 @@
+.wrapper {
+  position: sticky;
+  z-index: 2;
+  top: -1px;
+
+  &.stuck {
+    background: #ffffff;
+  }
+}
+
+.header {
+  display: flex;
+  max-width: 1810px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 0;
+  margin: 0 auto;
+
+  .leftBlock {
+    display: flex;
+    gap: 52px;
+  }
+
+  .rightBlock {
+    display: flex;
+    gap: 24px;
+  }
+}

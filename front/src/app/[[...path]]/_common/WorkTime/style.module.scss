@@ -1,0 +1,16 @@
+.time {
+  display: flex;
+  gap: 8px;
+
+  * {
+    font-size: 16px;
+  }
+
+  &.open * {
+    color: #52AE4F;
+  }
+
+  &.close * {
+    color: #E33E22;
+  }
+}

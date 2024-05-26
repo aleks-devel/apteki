@@ -1,22 +1,17 @@
-"use client";
-
 import "../globals.css";
-import React, { useState } from "react";
+import React from "react";
 
-import Link from "next/link";
 import { setLocale } from "yup";
 
-import { AuthForm } from "@/app/[[...path]]/_layout/AuthForm";
-import { CitySelector } from "@/app/[[...path]]/_layout/CitySelector";
+import { Body } from "@/app/[[...path]]/_layout/Body";
+import { Header } from "@/app/[[...path]]/_layout/Header";
 import { InstagramLogoSVG } from "@/app/[[...path]]/_layout/InstagramLogoSVG";
-import { MockLayout } from "@/app/[[...path]]/_layout/mock";
-import { PharmaSearchBar } from "@/app/[[...path]]/_layout/PharmaSearchBar";
 import { SimpleLogoSVG } from "@/app/[[...path]]/_layout/SimpleLogoSVG";
 import { TwitterLogoSVG } from "@/app/[[...path]]/_layout/TwitterLogoSVG";
 import { VkLogoSVG } from "@/app/[[...path]]/_layout/VkLogoSVG";
 
-import { LogoSVG } from "./_layout/LogoSVG";
 import styles from "./layout.module.scss";
+import "./global.scss";
 
 setLocale({
   mixed: {
@@ -41,31 +36,9 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [selectedCityId, setSelectedCityId] = useState<null | string>(null);
-
-  function handleSelectCityId(cityId: string) {
-    // TODO: backend
-    setSelectedCityId(cityId);
-  }
-
   return (
-    <div className={styles.body}>
-      <header className={styles.header}>
-        <div className={styles.leftBlock}>
-          <Link href="/">
-            <LogoSVG />
-          </Link>
-          <CitySelector
-            options={MockLayout.cities}
-            selectedId={selectedCityId}
-            onSelectId={handleSelectCityId}
-          />
-        </div>
-        <div className={styles.rightBlock}>
-          <PharmaSearchBar />
-          <AuthForm />
-        </div>
-      </header>
+    <Body>
+      <Header />
       {children}
       <footer className={styles.footer}>
         <div className={styles.leftSection}>
@@ -89,6 +62,6 @@ export default function Layout({
           <p>Выполнил Абдрахманов Ильнар, Группа 440А, УРК, ВКР</p>
         </div>
       </footer>
-    </div>
+    </Body>
   );
 }
