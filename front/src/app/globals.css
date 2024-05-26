@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  --main-color: #6E6D7A;
+  --secondary-color: #110523;
+  --main-bg: #FFFFFF;
+  --secondary-bg: #110523;
+  --third-bg: #F5F4FB;
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background: #F3F3F3;
+}
